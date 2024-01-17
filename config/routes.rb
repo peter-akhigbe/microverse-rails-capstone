@@ -9,4 +9,14 @@ Rails.application.routes.draw do
 
   # config/routes.rb
   resources :users
+
+  resources :groups do
+    resources :entities
+  end
+
+  resources :entities do
+    resources :groups
+  end
+
+  resources :group_entities
 end
