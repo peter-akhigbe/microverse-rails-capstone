@@ -36,3 +36,6 @@
 
 # IDE settings
 /.idea/*
+
+# .gitignore
+node_modules/
