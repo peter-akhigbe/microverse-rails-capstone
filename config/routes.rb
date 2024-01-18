@@ -14,9 +14,9 @@ Rails.application.routes.draw do
     resources :entities
   end
 
-  resources :entities do
-    resources :groups
-  end
+  # resources :entities do
+  #   resources :groups
+  # end
 
-  resources :group_entities
+  # resources :group_entities
 end

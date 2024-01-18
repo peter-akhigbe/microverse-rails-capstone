@@ -5,6 +5,6 @@
 <br>
 
 <div>
-  <%= link_to "Show this entity", @entity %> |
-  <%= link_to "Back to entities", entities_path %>
+  <%= link_to "Show this entity", group_entity_path(@group, @entity) %> |
+  <%= link_to "Back to entities", group_entities_path(@group, @entity) %>
 </div>
