@@ -1,9 +1,3 @@
-<h1>New entity</h1>
+<%= render "shared/header", title: 'New Entity', navPath: group_entities_path  %>
 
 <%= render "form", entity: @entity %>
-
-<br>
-
-<div>
-  <%= link_to "Back to entities", group_entities_path %>
-</div>

@@ -4,16 +4,6 @@
   align-items: center;
 }
 
-.group {
-  display: flex;
-  justify-content: space-between;
-  width: 50%;
-  min-width: 300px;
-  padding: 30px 10px;
-  margin: 10px;
-  background-color: white;
-}
-
 a {
   text-decoration: none;
   color: black;

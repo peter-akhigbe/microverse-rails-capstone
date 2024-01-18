@@ -24,6 +24,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: #efefef;
 }
 
@@ -52,6 +53,17 @@ header {
     cursor: pointer;
     outline: inherit;
   }
+}
+
+.group,
+.entity {
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+  min-width: 300px;
+  padding: 30px 10px;
+  margin: 10px;
+  background-color: white;
 }
 
 footer {

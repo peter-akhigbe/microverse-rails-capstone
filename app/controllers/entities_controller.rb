@@ -23,6 +23,7 @@ class EntitiesController < ApplicationController
     # @group = Group.find(params[:group_id])
 
     @entity = Entity.new(entity_params)
+    @entity.author = current_user
     @entity.groups << @group
 
     if @entity.save

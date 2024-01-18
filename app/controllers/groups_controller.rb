@@ -27,6 +27,7 @@ class GroupsController < ApplicationController
 
   def edit
     # Implement as needed
+    @icons = %w[home car shopping school kids computer]
   end
 
   def update

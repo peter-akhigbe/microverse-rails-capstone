@@ -1,14 +1,15 @@
 <p style="color: green"><%= notice %></p>
-
-<h1>Entities</h1>
+<%= render "shared/header", title: 'Entities', navPath: groups_path %>
 
 <div id="entities">
   <% @entities.each do |entity| %>
-    <%= render entity %>
-    <p>
-      <%= link_to "Show this entity", group_entity_path(@group, entity) %>
-    </p>
+    <div class="entity">
+      <%= entity.name %>
+      <p>$<%= entity.amount %></p>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "New entity", new_group_entity_path %>
+<footer>
+  <%= link_to "New entity", new_group_entity_path, class: 'footer-btn' %>
+</footer>

@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="form-group">
-    <%= form.label :name, class: 'name-label' %>
+    <%= form.label :name, class: 'label' %>
     <%= form.text_field :name, placeholder: 'Name' %>
   </div>
 
   <div class="form-group">
-    <%= form.label :icon, class: 'icon-label' %>
+    <%= form.label :icon, class: 'label' %>
     <%= form.select :icon, icons, { prompt: 'Select an icon' }, class: 'select-icon' %>
   </div>
 
@@ -37,18 +37,15 @@
         margin: 15px;
     }
 
-    .form-btn {
-        display: none;
-    }
-
-    .name-label,
-    .icon-label {
+    .form-btn,
+    .label {
         display: none;
     }
 
     input,
     .select-icon{
         width: 50vw;
+        min-width: 300px;
         padding: 10px;
         border-radius: 5px;
         border: 1px solid #ccc;
