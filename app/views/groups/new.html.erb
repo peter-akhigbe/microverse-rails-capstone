@@ -1,9 +1,12 @@
-<h1>New group</h1>
+<%= render "shared/header", title: 'New Groups', navPath: groups_path  %>
+<%= render "form", group: @group, icons: @icons, class: 'form' %>
 
-<%= render "form", group: @group %>
+<%#= render "shared/footer", hasButton: false %>
 
-<br>
-
-<div>
-  <%= link_to "Back to groups", groups_path %>
-</div>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>

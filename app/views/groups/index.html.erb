@@ -1,14 +1,21 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Groups</h1>
+<%= render "shared/header", title: 'Groups', navPath: root_path %>
 
 <div id="groups">
   <% @groups.each do |group| %>
-    <%= render group %>
+    <%= link_to group_entities_url(group), class: 'group' do %>
+        <p><%= group.name %></p>
+        <p>$<%= group.entities.sum(&:amount) %></p>
+    <% end %>
     <p>
-      <%= link_to "Show this group", group %>
+      <%#= link_to "Show this group", group %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New group", new_group_path %>
+<footer>
+  <%= link_to 'New Groups', new_group_path, class: 'footer-btn' %>
+</footer>
+
+<%#= render "shared/footer", text: 'New Groups', path: new_group_path, className: 'new-group-btn', hasButton: true %>

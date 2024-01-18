@@ -11,10 +11,12 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
+    @icons = %w[home car shopping school kids computer]
   end
 
   def create
     @group = Group.new(group_params)
+    @group.user = current_user
 
     if @group.save
       redirect_to @group, notice: 'Group was successfully created.'

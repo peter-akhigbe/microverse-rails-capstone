@@ -11,22 +11,56 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="form-group">
+    <%= form.label :name, class: 'name-label' %>
+    <%= form.text_field :name, placeholder: 'Name' %>
   </div>
 
-  <div>
-    <%= form.label :icon, style: "display: block" %>
-    <%= form.text_field :icon %>
+  <div class="form-group">
+    <%= form.label :icon, class: 'icon-label' %>
+    <%= form.select :icon, icons, { prompt: 'Select an icon' }, class: 'select-icon' %>
   </div>
 
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.number_field :user_id %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit class: 'form-btn' %>
   </div>
 <% end %>
+
+<footer>
+  <button class="footer-btn">
+    Create Group
+  </button>
+</footer>
+
+<style>
+    .form-group {
+        margin: 15px;
+    }
+
+    .form-btn {
+        display: none;
+    }
+
+    .name-label,
+    .icon-label {
+        display: none;
+    }
+
+    input,
+    .select-icon{
+        width: 50vw;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+
+    }
+</style>
+
+<script>
+    const footerBtn = document.querySelector('.footer-btn');
+    const formBtn = document.querySelector('.form-btn');
+
+    footerBtn.addEventListener('click', () => {
+        formBtn.click();
+    });
+</script>

@@ -7,16 +7,10 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  # config/routes.rb
-  resources :users
+  root 'groups#index'
 
+  resources :users
   resources :groups do
     resources :entities
   end
-
-  # resources :entities do
-  #   resources :groups
-  # end
-
-  # resources :group_entities
 end
