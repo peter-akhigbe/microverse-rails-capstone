@@ -27,7 +27,7 @@ class EntitiesController < ApplicationController
     @entity.groups << @group
 
     if @entity.save
-      redirect_to group_entity_path(@group, @entity), notice: 'Entity was successfully created.'
+      redirect_to group_entities_path(@group, @entity), notice: 'Entity was successfully created.'
     else
       render :new
     end

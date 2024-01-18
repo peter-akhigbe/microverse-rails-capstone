@@ -66,6 +66,35 @@ header {
   background-color: white;
 }
 
+.form-group {
+  margin: 15px;
+}
+
+.form-btn,
+.label {
+  display: none;
+}
+
+input,
+.select-icon {
+  width: 50vw;
+  min-width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#groups {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 footer {
   background-color: green;
   width: 100vw;
