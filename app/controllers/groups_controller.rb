@@ -2,7 +2,7 @@ class GroupsController < ApplicationController
   before_action :set_group, only: %i[show edit update destroy]
 
   def index
-    @groups = current_user.groups
+    @groups = current_user.groups.reverse
   end
 
   def show
