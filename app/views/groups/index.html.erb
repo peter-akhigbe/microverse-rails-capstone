@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render "shared/header", title: 'Groups', navPath: authenticated_root_path %>
+
+<div id="groups">
+  <% @groups.each do |group| %>
+    <%= link_to group_entities_url(group), class: 'group' do %>
+        <p><%= group.name %></p>
+        <p>$<%= group.entities.sum(&:amount) %></p>
+    <% end %>
+  <% end %>
+</div>
+
+<footer>
+  <%= link_to 'New Groups', new_group_path, class: 'footer-btn' %>
+</footer>

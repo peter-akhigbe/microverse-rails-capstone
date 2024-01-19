@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @entity %>
+
+<div>
+  <%= link_to "Edit this entity", edit_group_entity_path(@group, @entity) %> |
+  <%= link_to "Back to entities", group_entities_path %>
+
+  <%= button_to "Destroy this entity", group_entity_path(@group, @entity), method: :delete %>
+</div>
