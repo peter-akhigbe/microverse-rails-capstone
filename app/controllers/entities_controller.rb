@@ -5,7 +5,7 @@ class EntitiesController < ApplicationController
   def index
     # @group = Group.find(params[:group_id])
 
-    @entities = @group.entities
+    @entities = current_user.groups.find(params[:group_id]).entities
   end
 
   def show

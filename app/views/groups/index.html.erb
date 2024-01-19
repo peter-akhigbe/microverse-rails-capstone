@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render "shared/header", title: 'Groups', navPath: root_path %>
+<%= render "shared/header", title: 'Groups', navPath: authenticated_root_path %>
 
 <div id="groups">
   <% @groups.each do |group| %>
@@ -8,9 +8,6 @@
         <p><%= group.name %></p>
         <p>$<%= group.entities.sum(&:amount) %></p>
     <% end %>
-    <p>
-      <%#= link_to "Show this group", group %>
-    </p>
   <% end %>
 </div>
 
