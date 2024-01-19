@@ -1,0 +1,5 @@
+<header>
+  <%= link_to "<-", navPath, class: 'go-back' %>
+  <h1 class="title"><%= title %></h1>
+  <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'logout' %>
+</header>

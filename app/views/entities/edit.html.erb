@@ -1,0 +1,10 @@
+<h1>Editing entity</h1>
+
+<%= render "form", entity: @entity %>
+
+<br>
+
+<div>
+  <%= link_to "Show this entity", group_entity_path(@group, @entity) %> |
+  <%= link_to "Back to entities", group_entities_path(@group, @entity) %>
+</div>
