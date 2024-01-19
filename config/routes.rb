@@ -15,7 +15,5 @@ Rails.application.routes.draw do
     root 'groups#index', as: :authenticated_root
   end
 
-  unauthenticated do
-    root to: "splash_screen#index", as: :unauthenticated_root
-  end
+  root 'splash_screen#index', as: :splash_screen
 end

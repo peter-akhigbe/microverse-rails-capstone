@@ -1,8 +1,57 @@
-<div>
-  <h1>Budget App</h1>
-
-  <div>
-    <%= link_to 'Login', new_user_session_path %>
-    <%= link_to 'Sign up', new_user_registration_path %>
+<div class="splash-screen">
+  <h1 class="app-title">Budget App</h1>
+  <div class="buttons-container">
+    <%= link_to 'Login', new_user_session_path, class:"login-button" %>
+    <%= link_to 'Sign Up', new_user_registration_path, class:"signup-button" %>
   </div>
 </div>
+
+<style>
+    .splash-screen {
+        margin: 4rem auto;
+        padding: 2rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #f0f0f0;
+    }
+
+    .app-title {
+        color: #434b54;
+        font-family: 'Proxima Nova', sans-serif;
+        font-size: 2.5rem;
+    }
+
+    .buttons-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 200px;
+        margin-bottom: 5px;
+    }
+
+    .login-button {
+        display: block;
+        width: 90vw;
+        margin: 5px auto;
+        padding: 10px;
+        background-color: #3778c2;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 2px;
+    }
+
+    .signup-button {
+        display: block;
+        width: 90vw;
+        margin-bottom: 5px;
+        padding: 10px;
+        background-color: white;
+        color: #434b54;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 2px;
+    }
+</style>

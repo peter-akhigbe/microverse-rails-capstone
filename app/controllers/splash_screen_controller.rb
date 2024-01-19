@@ -1,5 +1,6 @@
 class SplashScreenController < ApplicationController
+  before_action :authenticate_user!, except: :index
   def index
-    # splash screen index action
+    # empty
   end
 end
