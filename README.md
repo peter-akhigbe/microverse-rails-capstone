@@ -28,6 +28,10 @@
 
 Microverse Rails Capstone Project is an expense tracker app built with Ruby on Rails and PostgreSQL.
 
+## [Live Link](https://budget-app-oemf.onrender.com/)
+
+## [Presentation Video](https://www.loom.com/share/15eda7c30e5c4f01a0f649eff9dc6b0a)
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -174,6 +178,7 @@ If you like this project please show support by staring ⭐️.
 
 * I would like to give Microverse my sincerest gratitude for accommodating me in the Full-time Software Development program.
 * [Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/)
+* [Original design idea by Gregoire Vella on Behance](https://www.behance.net/gregoirevella)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
