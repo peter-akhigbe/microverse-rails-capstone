@@ -31,6 +31,18 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class: 'signup' %>
   </div>
 <% end %>
+
+<style>
+    .field,
+    .actions {
+        margin: 5px;
+    }
+
+    .signup {
+        background-color: #518bd4;
+        color: white;
+    }
+</style>

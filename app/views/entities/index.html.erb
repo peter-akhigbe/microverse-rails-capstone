@@ -2,6 +2,7 @@
 <%= render "shared/header", title: 'Entities', navPath: groups_path %>
 
 <div id="entities">
+  <p style="text-align: center; margin-top: 10px">Total Amount: <%= @entities.sum(&:amount) %></p>
   <% @entities.each do |entity| %>
     <div class="entity">
       <%= entity.name %>
