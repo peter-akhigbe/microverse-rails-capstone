@@ -8,8 +8,8 @@ class EntitiesController < ApplicationController
   end
 
   def show
-  #   set_group
-  #  set_entity
+    #   set_group
+    #  set_entity
   end
 
   def new
@@ -61,7 +61,6 @@ class EntitiesController < ApplicationController
   def set_group
     @group = current_user.groups.find(params[:group_id])
   end
-
 
   def entity_params
     params.require(:entity).permit(:name, :amount, :author_id)

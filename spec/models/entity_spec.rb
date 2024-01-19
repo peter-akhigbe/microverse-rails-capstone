@@ -41,7 +41,7 @@ RSpec.describe Entity, type: :model do
   describe 'associations through instance methods' do
     it 'has many group_entities' do
       entity = Entity.new(name: 'Example', amount: 10)
-      group_entity = GroupEntity.new(group: Group.new, entity: entity)
+      group_entity = GroupEntity.new(group: Group.new, entity:)
       entity.group_entities << group_entity
       entity.save
 
@@ -51,7 +51,7 @@ RSpec.describe Entity, type: :model do
     it 'has many groups through group_entities' do
       entity = Entity.new(name: 'Example', amount: 10)
       group = Group.new(name: 'Example Group')
-      group_entity = GroupEntity.new(group: group, entity: entity)
+      group_entity = GroupEntity.new(group:, entity:)
       entity.group_entities << group_entity
       entity.save
 
