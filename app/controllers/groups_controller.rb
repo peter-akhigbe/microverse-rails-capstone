@@ -6,7 +6,7 @@ class GroupsController < ApplicationController
   end
 
   def show
-    # Implement as needed
+    # set_group
   end
 
   def new
@@ -26,11 +26,12 @@ class GroupsController < ApplicationController
   end
 
   def edit
-    # Implement as needed
+    # set_group
     @icons = %w[home car shopping school kids computer]
   end
 
   def update
+    # set_group
     if @group.update(group_params)
       redirect_to @group, notice: 'Group was successfully updated.'
     else
@@ -39,6 +40,7 @@ class GroupsController < ApplicationController
   end
 
   def destroy
+    # set_group
     @group.destroy
     redirect_to groups_url, notice: 'Group was successfully destroyed.'
   end

@@ -3,25 +3,22 @@ class EntitiesController < ApplicationController
   before_action :set_group
 
   def index
-    # @group = Group.find(params[:group_id])
-
+    # set_group
     @entities = current_user.groups.find(params[:group_id]).entities
   end
 
   def show
-    # @group = Group.find(params[:group_id])
-    # @entity = Entity.find(params[:id])
+  #   set_group
+  #  set_entity
   end
 
   def new
-    # @group = Group.find(params[:group_id])
-
+    # set_group
     @entity = Entity.new
   end
 
   def create
-    # @group = Group.find(params[:group_id])
-
+    # set_group
     @entity = Entity.new(entity_params)
     @entity.author = current_user
     @entity.groups << @group
@@ -34,14 +31,13 @@ class EntitiesController < ApplicationController
   end
 
   def edit
-    # @group = Group.find(params[:group_id])
-    # @entity = Entity.find(params[:id])
+    # set_group
+    # set_entity
   end
 
   def update
-    # @group = Group.find(params[:group_id])
-    # @entity = Entity.find(params[:id])
-
+    # set_group
+    # set_entity
     if @entity.update(entity_params)
       redirect_to group_entity_path(@group, @entity), notice: 'Entity was successfully updated.'
     else
@@ -50,8 +46,8 @@ class EntitiesController < ApplicationController
   end
 
   def destroy
-    # @entity = Entity.find(params[:id])
-
+    # set_group
+    # set_entity
     @entity.destroy
     redirect_to group_entities_url, notice: 'Entity was successfully destroyed.'
   end
@@ -59,11 +55,11 @@ class EntitiesController < ApplicationController
   private
 
   def set_entity
-    @entity = Entity.find(params[:id])
+    @entity = current_user.entities.find(params[:id])
   end
 
   def set_group
-    @group = Group.find(params[:group_id])
+    @group = current_user.groups.find(params[:group_id])
   end
 
 
