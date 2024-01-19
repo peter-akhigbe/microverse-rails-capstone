@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.feature 'User Authentication', type: :feature do
   scenario 'User logs in successfully' do
     # Create a user
-    user = User.create(name: 'Peter', email: 'peter@example.com', password: 'password')
+    User.create(name: 'Peter', email: 'peter@example.com', password: 'password')
 
     # Visit the login page
     visit new_user_session_path
@@ -22,4 +22,3 @@ RSpec.feature 'User Authentication', type: :feature do
     expect(page).to have_content('Groups')
   end
 end
-
