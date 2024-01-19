@@ -22,23 +22,17 @@
   </div>
 
   <div class="form-group">
-    <%= form.submit class: 'form-btn for-entity' %>
+    <%= form.submit class: 'form-btn' %>
   </div>
 <% end %>
 
 <footer>
-  <button class="footer-btn for-entity">
-    Create Entity
+  <button class="footer-btn" onclick="(
+    () => {
+      let formBtn = document.querySelector('.form-btn');
+      formBtn.click();
+      }
+    )()">
+    Create Group
   </button>
 </footer>
-
-<script>
-    const footerBtn = document.querySelector('.footer-btn.for-entity');
-    const formBtn = document.querySelector('.form-btn.for-entity');
-
-    const handleClick = () => {
-        formBtn.click();
-    }
-
-    footerBtn.addEventListener('click', handleClick);
-</script>

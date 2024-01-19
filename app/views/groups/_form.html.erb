@@ -27,18 +27,12 @@
 <% end %>
 
 <footer>
-  <button class="footer-btn">
+  <button class="footer-btn" onclick="(
+    () => {
+      let formBtn = document.querySelector('.form-btn');
+      formBtn.click();
+      }
+    )()">
     Create Group
   </button>
 </footer>
-
-<script>
-    const footerBtn = document.querySelector('.footer-btn');
-    const formBtn = document.querySelector('.form-btn');
-
-    const handleClick = () => {
-        formBtn.click();
-    }
-
-    footerBtn.addEventListener('click', handleClick);
-</script>

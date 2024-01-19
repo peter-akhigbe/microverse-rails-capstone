@@ -7,9 +7,6 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  # root 'groups#index'
-  # resources :users
-
   resources :groups do
     resources :entities
   end
@@ -19,6 +16,6 @@ Rails.application.routes.draw do
   end
 
   unauthenticated do
-    root "splash_screen#index", as: :unauthenticated_root
+    root to: "splash_screen#index", as: :unauthenticated_root
   end
 end
