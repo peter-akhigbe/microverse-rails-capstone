@@ -1,4 +1,4 @@
-# microverse-rails-capstone
+# Microverse Rails Capstone
 
 <a name="readme-top"></a>
 
@@ -24,9 +24,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 microverse-rails-capstone <a name="about-project"></a>
+# 📖 Microverse Rails Capstone <a name="about-project"></a>
 
-**microverse-rails-capstone** is a simple budget tracker app built with Ruby on Rails.
+Microverse Rails Capstone Project is an expense tracker app built with Ruby on Rails and PostgreSQL.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -39,13 +39,20 @@
   </ul>
 </details>
 
+<details>
+  <summary>PostgreSQL</summary>
+  <ul>
+    <li><a>https://www.postgresql.org/</a></li>
+  </ul>
+</details>
+
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
 - **Add category**
 - **Add Item**
-- **Add Authentication**
+- **Authentication**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
